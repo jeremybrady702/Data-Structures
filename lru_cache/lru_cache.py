@@ -52,7 +52,6 @@ class LRUCache:
                 del self.storage[self.order.head.value[0]]
                 self.order.remove_from_head()
                 self.size -= 1
-        # if cache not full and key not present
         self.order.add_to_tail((key, value))
         self.storage[key] = self.order.tail
         self.size += 1
